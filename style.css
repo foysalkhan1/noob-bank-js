@@ -2,9 +2,10 @@
 body {
     font-family: 'Open Sans', sans-serif;
     padding: 100px;
-    background-color: rgb(250, 227, 227);
 }
-.submit-area {
+.submit-area,
+.deposit-box, 
+.withdraw-box {
     margin-top: 50px;
     padding: 50px;
     border-radius: 10px;
@@ -13,4 +14,28 @@ body {
 }
 .submit-area h4 {
     margin-bottom: 20px;
+}
+#trx-area {
+    display: none;
+}
+.deposit,
+.withdraw,
+.balance {
+    padding: 50px;
+    margin: 10px;
+    border-radius: 5px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+
+}
+.deposit {
+    background-color: #10ac84;
+}
+.withdraw {
+    background-color: #ee5253;
+}
+.balance {
+    background-color: #ff9f43;
 }
