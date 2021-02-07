@@ -9,12 +9,23 @@ loginBtn.addEventListener('click', function(){
 // Deposit Event Handler
 const depositBtn = document.getElementById('deposit');
 depositBtn.addEventListener('click', function(){
-    const depositAmount = document.getElementById('depositInput').value;
-    const depositNumber = parseFloat(depositAmount);
+    const depositNumber = inputTextUpdate('depositInput');
     document.getElementById('depositInput').value = '';
     spanTextUpdate('currentDeposit', depositNumber);
     spanTextUpdate('currentBal', depositNumber);
 })
+//Withdraw Event Handler
+const witdhrawBtn = document.getElementById('withdraw');
+witdhrawBtn.addEventListener('click', function () {
+    const withdrawNumber = inputTextUpdate('withdrawInput');
+    console.log(withdrawNumber);
+})
+// Functions
+function inputTextUpdate(id) {
+    const withdrawAmount = document.getElementById(id).value;
+    const withdrawNumber = parseFloat(withdrawAmount);
+    return withdrawNumber;
+}
 function spanTextUpdate(id, depositNumber) {
     const currentBalance = document.getElementById(id).innerText;
     const currentBalanceNumber =parseFloat(currentBalance);
