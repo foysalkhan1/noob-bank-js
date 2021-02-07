@@ -18,7 +18,9 @@ depositBtn.addEventListener('click', function(){
 const witdhrawBtn = document.getElementById('withdraw');
 witdhrawBtn.addEventListener('click', function () {
     const withdrawNumber = inputTextUpdate('withdrawInput');
-    console.log(withdrawNumber);
+    spanTextUpdate('currentWithdraw', withdrawNumber);
+    spanTextUpdate('currentBal', -1 * withdrawNumber);
+    document.getElementById('withdrawInput').value = '';
 })
 // Functions
 function inputTextUpdate(id) {
